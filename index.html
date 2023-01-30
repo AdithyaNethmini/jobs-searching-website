@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>QuickJobs.LK - Sri Lanka | Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="./js/bootstrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <script>
+    window.onscroll = function() {
+      showonScroll()
+      showmoreBtn()
+    };
+
+    function showonScroll() {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        $("#totop").fadeIn();
+      } else {
+        $("#totop").fadeOut();
+      }
+    }
+
+    function goTop() {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 600);
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top navbar-custom">
+    <a class="navbar-brand" href="#">QuickJobs.LK</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-briefcase"></i> Job Fields</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./it.html"><i class="fas fa-laptop-code"></i> IT</a>
+            <a class="dropdown-item" href="./constructios.html"><i class="fas fa-drafting-compass"></i> Constructions</a>
+            <a class="dropdown-item" href="./education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a class="dropdown-item" href="./health.html"><i class="fas fa-stethoscope"></i> Health</a>
+            <a class="dropdown-item" href="./apparel.html"><i class="fas fa-tshirt"></i> Apparel</a>
+            <a class="dropdown-item" href="./financial.html"><i class="fas fa-dollar-sign"></i> Financial</a>
+            <a class="dropdown-item" href="./hotels.html"><i class="fas fa-utensils"></i> Hotels and Tourism</a>
+            <a class="dropdown-item" href="./agriculture.html"><i class="fas fa-seedling"></i> Agriculture</a>
+            <a class="dropdown-item" href="./management.html"><i class="fas fa-user-tie"></i> Management</a>
+            <a class="dropdown-item" href="./beauty.html"><i class="fas fa-paint-brush"></i> Beauty Culture</a>
+            <a class="dropdown-item" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html"><i class="fas fa-comments"></i> Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto" action="./searchresults.html" method="GET">
+        <div class="mr-3 align-items-center" style="font-size: 25px">
+          <a href="https://facebook.com/quickjobs.lk" target="_blank" class="custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+          <a href="https://twitter.com/quickjobslk" target="_blank" class="custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+          <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+          <a href="https://wa.me/94711771507" target="_blank" class="custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+        </div>
+        <div class="input-group mr-sm-2">
+          <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" class="form-control" placeholder="Search for Jobs" aria-label="Search for Jobs" aria-describedby="basic-addon2" required>
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i> Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <span style="font-size: 66px; text-shadow: 0px 4px 4px #282828;">Looking for a job?</span>
+        <p style="font-size: 46px; text-shadow: 0px 4px 4px #282828;">Welcome to the Sri Lanka's No:#1 job searching site.</p>
+      </div>
+    </div>
+    <div id="quickjobs" class="carousel slide mb-5" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#quickjobs" data-slide-to="0" class="active"></li>
+        <li data-target="#quickjobs" data-slide-to="1"></li>
+        <li data-target="#quickjobs" data-slide-to="2"></li>
+        <li data-target="#quickjobs" data-slide-to="3"></li>
+        <li data-target="#quickjobs" data-slide-to="4"></li>
+        <li data-target="#quickjobs" data-slide-to="5"></li>
+        <li data-target="#quickjobs" data-slide-to="6"></li>
+        <li data-target="#quickjobs" data-slide-to="7"></li>
+        <li data-target="#quickjobs" data-slide-to="8"></li>
+        <li data-target="#quickjobs" data-slide-to="9"></li>
+        <li data-target="#quickjobs" data-slide-to="10"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="rounded img-fluid" src="./images/carousel/13.jpg" alt="IT">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Information Technology</h1>
+            <p>Let's Find your dream job in Information Technology field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/14.jpg" alt="Constructions">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Constructions</h1>
+            <p>Let's Find your dream job in Constructions field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/15.jpg" alt="Education">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Education</h1>
+            <p>Let's Find your dream job in Education field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/16.jpg" alt="Health">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Health</h1>
+            <p>Let's Find your dream job in Health field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/17.jpg" alt="Apparel">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Apparel</h1>
+            <p>Let's Find your dream job in Apparel field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/18.jpg" alt="Financial">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Financial</h1>
+            <p>Let's Find your dream job in Financial field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/19.jpg" alt="Hotels and Tourism">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Hotels and Tourism</h1>
+            <p>Let's Find your dream job in Hotels and Tourism field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/20.jpg" alt="Agriculture">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Agriculture</h1>
+            <p>Let's Find your dream job in Agriculture field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/21.jpg" alt="Management">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Management</h1>
+            <p>Let's Find your dream job in Management field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/22.jpg" alt="Beauty Culture">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Beauty Culture</h1>
+            <p>Let's Find your dream job in Beauty Culture field!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="rounded img-fluid" src="./images/carousel/23.jpg" alt="Other">
+          <div class="carousel-caption carouselCustomText">
+            <h1>Other</h1>
+            <p>Let's Find your dream job in many other fields!</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#quickjobs" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#quickjobs" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo1">
+          <p>Information Technology</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './it.html';" onclick="window.location.href = './it.html';">Find a job in IT field <i
+              class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo2">
+          <p>Constructions</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './constructios.html';">Find a job in Constructions field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo3">
+          <p>Education</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './education.html';">Find a job in Education field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo4">
+          <p>Health</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './health.html';">Find a job in Health field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo5">
+          <p>Apparel</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './apparel.html';">Find a job in Apparel field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo6">
+          <p>Financial</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './financial.html';">Find a job in Financial field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo7">
+          <p>Hotels and Tourism</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './hotels.html';">Find a job in Hotels and Tourism field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo8">
+          <p>Agriculture</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './agriculture.html';">Find a job in Agriculture field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo9">
+          <p>Management</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './management.html';">Find a job in Management field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo10">
+          <p>Beauticulture</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './beauty.html';">Find a job in Beauticulture field <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" id="jumbo11">
+          <p>Other</p>
+          <h1></h1>
+          <button type="button" class="btn btn-primary  btn-lg float-right custom-zoom" onclick="window.location.href = './other.html';">Find a job in other fields <i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="totop" class="btn btn-warning fixed-bottom mx-3 my-3" style="display: none" onclick="goTop()"><i class="fas fa-angle-double-up"></i> Top</button>
+  <footer class="bg-dark">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Site Map</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./contact.html"><i class="fas fa-comments"></i> Contact</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-briefcase"></i> Job Fields</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./it.html"><i class="fas fa-angle-double-right"></i> IT</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./constructios.html"><i class="fas fa-angle-double-right"></i> Constructions</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./education.html"><i class="fas fa-angle-double-right"></i> Education</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./health.html"><i class="fas fa-angle-double-right"></i> Health</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./apparel.html"><i class="fas fa-angle-double-right"></i> Apparel</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./financial.html"><i class="fas fa-angle-double-right"></i> Financial</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./hotels.html"><i class="fas fa-angle-double-right"></i> Hotels and Tourism</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./agriculture.html"><i class="fas fa-angle-double-right"></i> Agriculture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./management.html"><i class="fas fa-angle-double-right"></i> Management</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./beauty.html"><i class="fas fa-angle-double-right"></i> Beauty Culture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Need any help?</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-phone"></i> Call Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-mobile-alt"></i><a class="custom-anchor" href="tel:+94711771507"> Hotline - (+94) 71 17 71 507</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-phone-alt"></i><a class="custom-anchor" href="tel:+94773352333"> Landline - (+94) 77 33 52 333</a> </li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-at"></i> Email Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-envelope-open-text"></i><a class="custom-anchor" href="mailto:contact.quickjobs.lk@gmail.com"
+                    target="_blank">contact.quickjobs.lk@gmail.com</a></li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-mail-bulk"></i> Address...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;Department of ICT,<br>&nbsp;&nbsp;&nbsp;Faculty of Technology,<br>&nbsp;&nbsp;&nbsp;University of Ruhuna,<br>&nbsp;&nbsp;&nbsp;Karagoda
+                  Uyangoda,<br>&nbsp;&nbsp;&nbsp;Kamburupitiya,<br>&nbsp;&nbsp;&nbsp;Matara, Sri Lanka.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="container">
+                <div class="text-white text-center mt-3"> You can follow us on Facebook, Twitter or Instagram. Also you are able to contact us via WhatsApp. </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="https://facebook.com/quickjobs.lk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+                <a href="https://twitter.com/quickjobslk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+                <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="display-4 custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+                <a href="https://wa.me/94711771507" target="_blank" class="display-4 custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-white text-center my-3">&copy; All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

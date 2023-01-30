@@ -1,0 +1,118 @@
+body {
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#jumbo1, #jumbo2, #jumbo3, #jumbo4, #jumbo5, #jumbo6, #jumbo7, #jumbo8, #jumbo9, #jumbo10, #jumbo11 {
+  font-size: 56px;
+  text-shadow: 0px 4px 4px #282828;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#jumbo1 {
+  background: url("../images/catcovers/1.jpg") no-repeat center center;
+}
+
+#jumbo2 {
+  background: url("../images/catcovers/2.jpg") no-repeat center center;
+}
+
+#jumbo3 {
+  background: url("../images/catcovers/3.jpg") no-repeat center center;
+}
+
+#jumbo4 {
+  background: url("../images/catcovers/4.jpg") no-repeat center center;
+}
+
+#jumbo5 {
+  background: url("../images/catcovers/5.jpg") no-repeat center center;
+}
+
+#jumbo6 {
+  background: url("../images/catcovers/6.jpg") no-repeat center center;
+}
+
+#jumbo7 {
+  background: url("../images/catcovers/7.jpg") no-repeat center center;
+}
+
+#jumbo8 {
+  background: url("../images/catcovers/8.jpg") no-repeat center center;
+}
+
+#jumbo9 {
+  background: url("../images/catcovers/9.jpg") no-repeat center center;
+}
+
+#jumbo10 {
+  background: url("../images/catcovers/10.jpg") no-repeat center center;
+}
+
+#jumbo11 {
+  background: url("../images/catcovers/11.jpg") no-repeat center center;
+}
+
+.carouselCustomText {
+  background-color: rgb(0, 0, 0, .2);
+  border-radius: 25px;
+}
+
+@keyframes footerslider {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  100% {
+    left: 7px;
+    top: 0px;
+  }
+}
+
+.footer-list:hover {
+  animation-name: footerslider;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes footerslidel {
+  0% {
+    left: 7px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.footer-list {
+  animation-name: footerslidel;
+  animation-duration: 0.2s;
+}
+
+.custom-anchor {
+  color: #ffffff;
+}
+
+.custom-anchor:hover {
+  color: #ffffff;
+}
+
+.custom-zoom {
+  transition: transform .2s;
+  /* Animation */
+}
+
+.custom-zoom:hover {
+  transform: scale(1.2);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}

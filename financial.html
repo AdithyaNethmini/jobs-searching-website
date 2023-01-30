@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>QuickJobs.LK - Sri Lanka | Financial Field</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="./js/bootstrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <script>
+    window.onscroll = function() {
+      showonScroll()
+      showmoreBtn()
+    };
+
+    function showonScroll() {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        $("#totop").fadeIn();
+      } else {
+        $("#totop").fadeOut();
+      }
+    }
+
+    function goTop() {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 600);
+    }
+    $(function() {
+      $("#deck1").slideDown("slow", function() {
+        $("#deck2").slideDown("slow", function() {
+          $("#deck3").slideDown("slow");
+        });
+      });
+    });
+
+    function showmoreBtn() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("loadMore").style.display = "block";
+      } else {
+        document.getElementById("loadMore").style.display = "none";
+      }
+    }
+    $(document).ready(function() {
+      var c = 4;
+      $("#loadMore").click(function() {
+        $("#deck" + c).slideDown("slow");
+        var y = $(window).scrollTop();
+        $("html, body").animate({
+          scrollTop: y + $(window).height()
+        }, 600);
+        c++;
+        if (c > 4) {
+          document.getElementById("loadMore").innerHTML = "End of the List <i class='fas fa-ban'></i>"
+          document.getElementById("loadMore").classList.add("disabled");
+          document.getElementById("loadMore").classList.remove("btn-primary");
+          document.getElementById("loadMore").classList.add("btn-outline-secondary");
+          document.getElementById("loadMore").disabled = true;
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top navbar-custom">
+    <a class="navbar-brand" href="./index.html">QuickJobs.LK</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-briefcase"></i> Job Fields</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./it.html"><i class="fas fa-laptop-code"></i> IT</a>
+            <a class="dropdown-item" href="./constructios.html"><i class="fas fa-drafting-compass"></i> Constructions</a>
+            <a class="dropdown-item" href="./education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a class="dropdown-item" href="./health.html"><i class="fas fa-stethoscope"></i> Health</a>
+            <a class="dropdown-item" href="./apparel.html"><i class="fas fa-tshirt"></i> Apparel</a>
+            <a class="dropdown-item active" href="#"><i class="fas fa-dollar-sign"></i> Financial</a>
+            <a class="dropdown-item" href="./hotels.html"><i class="fas fa-utensils"></i> Hotels and Tourism</a>
+            <a class="dropdown-item" href="./agriculture.html"><i class="fas fa-seedling"></i> Agriculture</a>
+            <a class="dropdown-item" href="./management.html"><i class="fas fa-user-tie"></i> Management</a>
+            <a class="dropdown-item" href="./beauty.html"><i class="fas fa-paint-brush"></i> Beauty Culture</a>
+            <a class="dropdown-item" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html"><i class="fas fa-comments"></i> Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto" action="./searchresults.html" method="GET">
+        <div class="mr-3 align-items-center" style="font-size: 25px">
+          <a href="https://facebook.com/quickjobs.lk" target="_blank" class="custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+          <a href="https://twitter.com/quickjobslk" target="_blank" class="custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+          <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+          <a href="https://wa.me/94711771507" target="_blank" class="custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+        </div>
+        <div class="input-group mr-sm-2">
+          <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" class="form-control" placeholder="Search for Jobs" aria-label="Search for Jobs" aria-describedby="basic-addon2" required>
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i> Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    <h1>Jobs in Financial field</h1>
+    <p>Jobs related to this field.</p>
+  </div>
+  <div class="container" id="carddecks">
+    <div class="card-deck mb-5" id="deck1" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/1.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Realtionship Manager</h4>
+          <p class="card-text"> Retail and SME Credit (Southern and Ratnapura Branches) Nations Trust Bank. </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails1"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Realtionship Manager</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/1.jpg" alt="jobimg"> Retail and SME Credit (Southern and Ratnapura Branches) Nations Trust Bank. Analyzing and evaluating of financial statements and
+              identifying financial solutions based on the client's requirements and preparing credit proposals as per Bank's Credit Policy. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/2.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Junior Accounts Assistant (Female/Male)</h4>
+          <p class="card-text">Action Lanka (Pvt) Ltd</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails2"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails2">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Job Title</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/2.jpg" alt="jobimg"> Candidates between 18 - 25 years.<br> School Leavers are encouraged to apply.<br> Excellent Computer Literacy in MS Office, E-mailing
+              etc.<br> Experience on Quickbooks is an added advantage.<br> Sound knowledge in English.<br> Ability to meet deadlines and targets and work with minimum supervision.<br> Residing close proximity to Koswatte/Battaramulla is preferred but
+              not mandatory. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/3.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Assistant Manager Finance</h4>
+          <p class="card-text">OYO (Oravel Technology and Hospitality Lanka Pvt Ltd)</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails3"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails3">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Assistant Manager Finance</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/3.png" alt="jobimg"> Understanding the Automated Reconciliation system and Different types of Owner Contracts in OYO and help owners and business teams for
+              any query that comes their way. Get the reconciliation issues resolved by taking appropriate approvals as per SOP in collaboration with Central Reconciliation tea calculations by generating the data and assessing same through various
+              analysis, Publish MIS on different key performance metrics that helps in identifying the gaps and new improvement opportunities in overall reconciliation system. Execute compliance requirements for Fixed Assets tagging, Invoice
+              processing etc. Ensure timely Collection from owners and corporates. Knowledge and computation of taxes and commissions Should be able to comprehend booking reports and explain the same in simplified way to hotel partners Supporting
+              month end closure Dispute Management through coordination with internal and external stakeholders </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/4.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Deputy Manager - Cash Management</h4>
+          <p class="card-text">Nations Trust Bank - Colombo</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails4"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails4">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Deputy Manager - Cash Management</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/4.jpg" alt="jobimg"> Manage Onbording of Corporate and SME customers to Bank Cash Management system and Open API Banking solutions Work closely with
+              Corporate and SME Business in order to meet the set customer acquisition and revenue targets Educate Corporate and SME frontline staff on Cash Management System (CMS) and Corporate Intemet Banking (CIB) product capability and create
+              awareness of product through one on one selling Provide consultative role in assisting RM team in handling customer support in CMS and CIB products Ensure business viability and profitability of the Transactional Banking business by
+              Monitoring customer revenue and identifying cost reduction Assist IT to Implement IT systems/Processes required for CMS and CIB and measure process efficiencies Keep abreast of new developments in the digital arena for businesses and
+              evolving client needs to ensure Nations Trust offer stays ahead of competition </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck mb-5" id="deck2" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/5.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Fund Accountants</h4>
+          <p class="card-text">HSBC Bank.</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails5"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails5">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Job Title</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/5.png" alt="jobimg"> If you're looking for a career where you can make a real impression join HSBC and discover how valued you will be. Whether you want a
+              career that could take you to the top, or simply take you in an exciting new direction, HSBC offers opportunities, support, and rewards that will take you further. As part of the world's leading international bank, HSBC Securities
+              Services offers complex accounting, valuation and web-based investor services for traditional funds, hedge funds, fund of funds and private equity funds; trustee and depository services; performance consultancy services to institutional
+              and corporate clients worldwide as well as cash management, foreign exchange, securities exchange, securities lending, corporate trusteeship, issuing and paying agency services, management and corporate secretarial, compliance and
+              regulatory reporting. We are now looking for ambitious professionals with knowledge and experience in Finance and Accounting to join our business in Colombo. We promote a world-class, multicultural work environment with an emphasis on
+              development, learning, and global career growth. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/6.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Fund Administrators</h4>
+          <p class="card-text">HSBC Securities Services HSBC Bank </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails6"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails6">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Fund Administrators</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/6.png" alt="jobimg"> HSBC Securities Services If you're looking for a career where you will be respected as an individual and valued for the contributions
+              you make, join HSBC and discover how diversity drives our success. Whether you want a career that could take you to the top, or simply take you in an exciting new direction, HSBC offers opportunities, support, and rewards that will take
+              you further. The Global Service Centre Colombo embodies HSBC Group's global footprint, network and integrated, streamlined models for processes and systems. HSBC Securities Services WISS), as part of the world's leading international
+              bank, provides robust and reliable solutions that enhance performance and mitigate risk, today and in the future. Working with institutional investors, banks. insurance companies, governments, and multinational corporations. HSBC
+              Securities Services offers a range of fund administration, global custody and clearing, and corporate trust and loan agency services. We are currently seeking experienced professionals to join the HSBC Securities Services team. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/7.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Cash Management Assistant</h4>
+          <p class="card-text">Siyapatha Finance PLC</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails7"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails7">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Cash Management Assistant</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/7.jpg" alt="jobimg"> We are in the search for individuals who have the passion in serving our internal & external customers and the ideal candidates should
+              posses excellent communication skills with a positive attitude. Experience and Qualifications: Passed G.C.E A/L. Minimum of 1-2 years of experience in Cashiering function in a reputed organization. Ability to handle multiple tasks and
+              good knowledge in office package. Excellent team work with time management skills. Remuneration: Remuneration package is negotiable and would be in line with the applicant's experience and qualifications. Please forward your
+              comprehensive resume with names of three none-related referees within 7 days of this advertisement </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/8.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Personal Banking Advisors</h4>
+          <p class="card-text">Union Bank PLC - Colombo</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails8"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails8">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Job Title</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/8.png" alt="jobimg"> Join Our Credit Card Sales Team Careers with our Sales teams allow you to immediately start in a role which rewards your contribution
+              towards business growth. The job entails promoting the Bank's Credit Card to our esteemed client portfolio. We believe that being a part of this team will give you the exposure and experience to accelerate your career goals.
+              Requirements Minimum 1 year of experience in Sales and Marketing. Should have passed GCE Advanced Level OR GCE Ordinary Level examinations. Have excellent communication skills. Have strong relationship building skills. Be willing to
+              visit customers and canvass business in a target oriented environment. Be a team player with positive attitude. Ability to take initiative and work independently. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck mb-5" id="deck3" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/9.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Credit Analyst – SME Asset Center</h4>
+          <p class="card-text">Union Bank PLC - Colombo</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails9"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails9">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Credit Analyst – SME Asset Center</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/9.png" alt="jobimg"> Key Responsibilities: Responsible for preparation of credit proposals with the ability to carry out an in-depth analysis of credit,
+              risk, financial and other industry information in coordination with Branch Managers, SME Relationship Managers, Zonal Heads and Customers. The ideal candidate should be able to evaluate, recommend and submit proposals independently with
+              minimal supervision strictly within the agreed turnaround time (TAT) whilst adhering to laid credit / risk policy and other guidelines of the bank. Requirements: Should possess a degree in management/accounting or full professional
+              qualification in Banking or equivalent. Possess 06 years of experience in banking/financial industry with a minimum of 03 years in a similar capacity in credit. Comprehensive understanding of credit/risk evaluation, financial statements
+              and cash flow analysis (Preparation of Spread Sheet / interpretation of financials) Ability to understand customer requirements, analyze financial records of SME clients and negotiate structure lending packages to suite the SME business
+              needs within the credit policy framework of the Bank without compromising the associated risks. Carryout customer/site visits in order to understand and structure credit proposals. Accountable for the entire process from preparation of
+              the credit appraisal until disbursal of the facility package. Excellent oral and written communication skills with the ability to maintain cordial relationships with stakeholders at all levels. Committed to achieving individual and team
+              goals. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/10.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Finance and Operations Manager</h4>
+          <p class="card-text">Chamee Chemist - Colombo</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails10"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails10">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Finance and Operations Manager</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/10.png" alt="jobimg"> The Company ChameeChemist is Pharmaceutical Importer and Wholesale Distributor with over 25 years of experience. Our product range
+              includes 180 world-class products imported from the best manufacturers around the world. Our distribution is managed through a distributor network. We also provide a simple, seamless and speedy service that is unmatched in Sri Lanka.
+              Our Accounts back end is powered by cloud technology. Responsibilities Preparation of monthly and annual financial plans and reports, including hands-on assistance with the payroll, accounts receivable and accounts payable functions
+              Execute and input to the financial strategy of ChameeChemist Manage financial controls and accounting procedures, ensuring all general ledger information is accurate, kept up to date and actioned in a timely manner Manage the usual
+              business risks Manage the relationship with our banking partner Propose action plans to ensure that annual financial and grant financial objectives are achieved Manage all operational aspects of the business, namely asset acquisition
+              and maintenance, sourcing of quotes for all major acquisitions and managing the relationship with suppliers of these assets Manage all tax, financial and associated legal requirements for the enterprise including the preparation of all
+              tax documentation Manage the annual reporting to comply with Government grant programs including liaising with external auditors where required Manage the reporting requirements Contribute to the cohesion of the senior management team;
+              and Ensure full transparency over the financial performance of the company </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/11.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Accounts Executive</h4>
+          <p class="card-text">Softlogic Retail (Pvt) Ltd</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails11"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails11">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Accounts Executive</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/11.jpg" alt="jobimg"> Job Profile Keeping track of all payments and expenditures, including payroll, purchase orders, invoices, statements, etc. Matching
+              invoices in accordance with the PO and review outstanding invoices. Reconciling processed work by verifying entries and comparing system reports to balances Maintaining historical records Paying vendors by scheduling pay checks and
+              ensuring payment is received for outstanding credit; generally responding to all vendor enquiries regarding finance Reconcile all supplier statements Continuing to improve the payment process Requirement Should possess part
+              qualification in AATSL Minimum 2 years of experience in similar industry relating to Accounts Payable Good knowledge in Microsoft Office Packages (MS Word & MS excel) Experience in ERP systems will be added advantage Having good
+              communication skill in English both written and verbal. Ability to work under minimum supervision Ability to work under pressure & adhere to tight deadlines </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/12.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Jobs at Cargills (Ceylon) PLC</h4>
+          <p class="card-text">Cargills (Ceylon) PLC - Colombo , Gampaha</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails12"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails12">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Jobs at Cargills (Ceylon) PLC</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/12.jpg" alt="jobimg"> Accounts Assistants Embark on a prestigious career within a versatile culture. Cargills Ceylon PLC is on the lookout for dedicated
+              Accounts Assistants to serve in the different sectors of the group. The potential candidates should possess the following qualifications Degree in Finance, Accountancy or Business Administration or Fully qualified in AAT / Partly
+              qualified in CASL or similar accounting professional exam. Age between 20 – 28 Years Working experience in a related field would be an added advantage Selected candidates will be offered an attractive remuneration package in par with
+              industry norm and Article can be completed for ICASL students. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck mb-5" id="deck4" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/13.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Internship - Internal Audit</h4>
+          <p class="card-text">Citizens Development Business Finance PLC (CDB)</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails13"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails13">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Internship - Internal Audit</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/13.png" alt="jobimg"> Embark on a rewarding and enriching career - join the dynamic team at CDB. Discover countless learning opportunities growing with a
+              team of exceptional professionals who share a common passion to continually raise the bar, setting benchmarks for the industry. We optimise your talents, skills and competencies by identifying opportunities that will best suit your
+              career aspirations and add value to the Company's ultimate vision. We are looking for a dynamic, dedicated team oriented individual who can make a valuable contribution to the continued success of our organization. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/14.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Finance Controller - Advantis - Freight Sector (CEVA)</h4>
+          <p class="card-text">Hayleys Advantis Limited - Colombo</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails14"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails14">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Finance Controller - Advantis - Freight Sector (CEVA)</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/14.jpg" alt="jobimg"> Hayleys Group is ranked amongst Sri Lanka’s largest and most diversified public companies with a strong presence in global markets and
+              manufacturing, agriculture, transportation and logistics, consumer, power and energy, investments and services as well as in leisure and aviation. HAYLEYS ADVANTIS LIMITED Hayleys Advantis Group, the transportation, logistics and
+              aviation arm of Hayleys PLC with over 60 years of industry presence, is a pioneer in providing end-to-end logistics solutions, representing some of the World’s foremost shipping lines, freight forwarders and the largest air express
+              transportation company. The Group also represents some of the world’s leading passenger and cargo airlines and specializes in travel agency services. Today Advantis controls a truly international network offering and is fast becoming
+              the undisputed leader in the areas of integrated logistics, freight management, marine services, terminals & engineering operations, airport services, aviation supply services, outbound travel services and other travel related services.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/15.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Accounts Assistant</h4>
+          <p class="card-text">Ninety East Holdings (Pvt) Ltd</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails15"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails15">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Accounts Assistant</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/15.png" alt="jobimg"> New opportunity for an Accounts Assistant to work for a company based in the UK Industry: Accountancy Firm Client Details: The client
+              is a Reputable Accountancy firm in UK. They are now looking for an Accounts Assistant to help in the increasing bookkeeping and administration functions Accounts Assistant Roles and duties: Bookkeeping and document management on a daily
+              basis Dealing with clients directly to obtain information required Bank reconciliations, AP and AR Reconciliations Preparing quarterly VAT returns when required Posting sale and purchase invoices and dealing with any issues that may
+              arise Our ideal candidate would meet the following criteria: Possess some familiarity of cloud book keeping/ accounting Good with numbers and figures and demonstrate an analytical acumen Actively studying either ACCA/CIMA or AAT
+              Excellent ability in written and oral English as they will be communicating with clients and colleagues based in the UK. Excellent ability of attention to detail, be able to organise themselves and work autonomously. Good working
+              knowledge of SAGE, Xero, Quickbooks spreadsheets, Brightpay, XERO, Accounts production – Taxcalc, IRIS Must be able to work as part of a team. Candidates with two to three years of work experience may receive an additional advantage.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/finance/16.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Senior Accountant</h4>
+          <p class="card-text">Emerchemie NB (Ceylon) Limited</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails16"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails16">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Senior Accountant</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/finance/16.jpg" alt="jobimg"> The Ideal Candidates should: be between 30-40 years of age possess full qualification in CA/CIMA or ACCA with a degree from a
+              recognised university possess good oral and written communication skills have a good knowledge of MS office have a good knowledge of SLFRS Prior experience in Pharmaceutical or FMCG industry / Financial Reporting (Finalization of
+              Accounts)Import costing preparation & maintenance of fixed assets requests, coordinating A competitive remuneration package will be on offer for the chosen candidate with ample opportunities for career development. If you are confident,
+              that you possess the above requirements, upload your Curriculum Vitae indicating the names of two non-related referees along with their contact details via “Xpress Jobs" by clicking on the 'APPLY FOR THIS JOB' button shown below. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="loadMore" class="btn btn-primary btn-block mb-3" style="display: none">See More <i class="fas fa-forward"></i></button>
+    <button id="totop" class="btn btn-warning fixed-bottom mx-3 my-3" style="display: none" onclick="goTop()"><i class="fas fa-angle-double-up"></i> Top</button>
+  </div>
+  <footer class="bg-dark">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Site Map</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./contact.html"><i class="fas fa-comments"></i> Contact</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-briefcase"></i> Job Fields</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./it.html"><i class="fas fa-angle-double-right"></i> IT</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./constructios.html"><i class="fas fa-angle-double-right"></i> Constructions</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./education.html"><i class="fas fa-angle-double-right"></i> Education</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./health.html"><i class="fas fa-angle-double-right"></i> Health</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./apparel.html"><i class="fas fa-angle-double-right"></i> Apparel</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./financial.html"><i class="fas fa-angle-double-right"></i> Financial</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./hotels.html"><i class="fas fa-angle-double-right"></i> Hotels and Tourism</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./agriculture.html"><i class="fas fa-angle-double-right"></i> Agriculture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./management.html"><i class="fas fa-angle-double-right"></i> Management</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./beauty.html"><i class="fas fa-angle-double-right"></i> Beauty Culture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Need any help?</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-phone"></i> Call Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-mobile-alt"></i><a class="custom-anchor" href="tel:+94711771507"> Hotline - (+94) 71 17 71 507</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-phone-alt"></i><a class="custom-anchor" href="tel:+94773352333"> Landline - (+94) 77 33 52 333</a> </li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-at"></i> Email Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-envelope-open-text"></i><a class="custom-anchor" href="mailto:contact.quickjobs.lk@gmail.com"
+                    target="_blank">contact.quickjobs.lk@gmail.com</a></li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-mail-bulk"></i> Address...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;Department of ICT,<br>&nbsp;&nbsp;&nbsp;Faculty of Technology,<br>&nbsp;&nbsp;&nbsp;University of Ruhuna,<br>&nbsp;&nbsp;&nbsp;Karagoda
+                  Uyangoda,<br>&nbsp;&nbsp;&nbsp;Kamburupitiya,<br>&nbsp;&nbsp;&nbsp;Matara, Sri Lanka.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="container">
+                <div class="text-white text-center mt-3"> You can follow us on Facebook, Twitter or Instagram. Also you are able to contact us via WhatsApp. </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="https://facebook.com/quickjobs.lk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+                <a href="https://twitter.com/quickjobslk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+                <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="display-4 custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+                <a href="https://wa.me/94711771507" target="_blank" class="display-4 custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-white text-center my-3">&copy; All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

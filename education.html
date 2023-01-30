@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>QuickJobs.LK - Sri Lanka | Education Field</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="./js/bootstrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <script>
+    window.onscroll = function() {
+      showonScroll()
+      showmoreBtn()
+    };
+
+    function showonScroll() {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        $("#totop").fadeIn();
+      } else {
+        $("#totop").fadeOut();
+      }
+    }
+
+    function goTop() {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 600);
+    }
+    $(function() {
+      $("#deck1").slideDown("slow", function() {
+        $("#deck2").slideDown("slow", function() {
+          $("#deck3").slideDown("slow");
+        });
+      });
+    });
+
+    function showmoreBtn() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("loadMore").style.display = "block";
+      } else {
+        document.getElementById("loadMore").style.display = "none";
+      }
+    }
+    $(document).ready(function() {
+      var c = 4;
+      $("#loadMore").click(function() {
+        $("#deck" + c).slideDown("slow");
+        var y = $(window).scrollTop();
+        $("html, body").animate({
+          scrollTop: y + $(window).height()
+        }, 600);
+        c++;
+        if (c > 4) {
+          document.getElementById("loadMore").innerHTML = "End of the List <i class='fas fa-ban'></i>"
+          document.getElementById("loadMore").classList.add("disabled");
+          document.getElementById("loadMore").classList.remove("btn-primary");
+          document.getElementById("loadMore").classList.add("btn-outline-secondary");
+          document.getElementById("loadMore").disabled = true;
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top navbar-custom">
+    <a class="navbar-brand" href="./index.html">QuickJobs.LK</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-briefcase"></i> Job Fields</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./it.html"><i class="fas fa-laptop-code"></i> IT</a>
+            <a class="dropdown-item" href="./constructios.html"><i class="fas fa-drafting-compass"></i> Constructions</a>
+            <a class="dropdown-item active" href="#"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a class="dropdown-item" href="./health.html"><i class="fas fa-stethoscope"></i> Health</a>
+            <a class="dropdown-item" href="./apparel.html"><i class="fas fa-tshirt"></i> Apparel</a>
+            <a class="dropdown-item" href="./financial.html"><i class="fas fa-dollar-sign"></i> Financial</a>
+            <a class="dropdown-item" href="./hotels.html"><i class="fas fa-utensils"></i> Hotels and Tourism</a>
+            <a class="dropdown-item" href="./agriculture.html"><i class="fas fa-seedling"></i> Agriculture</a>
+            <a class="dropdown-item" href="./management.html"><i class="fas fa-user-tie"></i> Management</a>
+            <a class="dropdown-item" href="./beauty.html"><i class="fas fa-paint-brush"></i> Beauty Culture</a>
+            <a class="dropdown-item" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html"><i class="fas fa-comments"></i> Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto" action="./searchresults.html" method="GET">
+        <div class="mr-3 align-items-center" style="font-size: 25px">
+          <a href="https://facebook.com/quickjobs.lk" target="_blank" class="custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+          <a href="https://twitter.com/quickjobslk" target="_blank" class="custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+          <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+          <a href="https://wa.me/94711771507" target="_blank" class="custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+        </div>
+        <div class="input-group mr-sm-2">
+          <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" class="form-control" placeholder="Search for Jobs" aria-label="Search for Jobs" aria-describedby="basic-addon2" required>
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i> Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    <h1>Jobs in Education field</h1>
+    <p>Jobs related to this field.</p>
+  </div>
+  <div class="container" id="carddecks">
+    <div class="card-deck mb-5" id="deck1" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/1.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Teacher Vacancies</h4>
+          <p class="card-text">The pioneer of the English-medium school in Sri Lanka.</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails1"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Teacher Vacancies</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/1.jpg" alt="jobimg"> The pioneer of the English-medium school in Sri Lanka ,Amal International School is proud to welcome students of all nationalities
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/2.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">VACANCY FOR ENGLISH TEACHER</h4>
+          <p class="card-text"> The candidate should possess a recognized Higher Diploma or Degree in the English Language </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails2"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails2">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">VACANCY FOR ENGLISH TEACHER</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/2.jpg" alt="jobimg"> The candidate should possess a recognized Higher Diploma or Degree in the English Language • Ability to do lectures for Kids, After
+              O/L and After A/L Students • Reasonable exposure or experience in the relevant field will be a distinct advantage. • Prior experience in teaching/training or good teaching ability and presentation skills are highly preferred. The
+              positions carry an attractive salary package and other benefits applicable. Please rush your CV to ambalangoda@esoft.lk Manager ESOFT Ambalangoda Branch No. 63, New Rd, Ambalangoda ambalangoda@esoft.lk </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/3.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">English Teacher/ Lecturer Galle</h4>
+          <p class="card-text"> Reasonable exposure or experience in the relevant field will be a distinct advantage. </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails3"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails3">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">English Teacher/ Lecturer Galle</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/3.jpg" alt="jobimg"> • The candidate should possess a recognized Higher Diploma or Degree in the English Language • Ability to do lectures for Kids, After
+              O/L and After A/L Students • Reasonable exposure or experience in the relevant field will be a distinct advantage. • Prior experience in teaching/training or good teaching ability and presentation skills are highly preferred. Manager
+              ESOFT Ambalangoda Branch No. 63, New Rd, Ambalangoda </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/4.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">School Vacancies</h4>
+          <p class="card-text">Applications are invited from qualified graduates with teaching experience.</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails4"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails4">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">School Vacancies</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/4.jpg" alt="jobimg"> Applications are invited from qualified graduates with teaching experience and appropriate professional competence for the following
+              positions in the Secondary section of the School to teach the Edexcel (JK) IGCSE and International Advanced Level. Fluency in English with excellent communication skills and proven capability to teach students at the specified levels
+              are required. Teacher of Chemistry Teacher of Physics Teacher of Geography Teacher of English and English Literature TEACHER OF GERMAN AND FRENCH - SECONDARY SECTION Attractive remuneration package above market rates is on offer.
+              Applications are invited with CV and the names of two non-related referees to: Senior Management Coordinator COLOMBO INTERNATIONAL SCHOOL 28, Gregory's Road, Colombo 7 Source: Sunday Observer (2019-10-13) (Ownership of this ad is owned
+              by the original owner and this is quoted. We will not accept any responsibility for this information if there is a change or false information included in the notice.) </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck mb-5" id="deck2" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/5.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Lecturers</h4>
+          <p class="card-text">Applications are open for all candidates. </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails5"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails5">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Lecturers</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/5.jpg" alt="jobimg"> Applications are open for all candidates to fill the Lecturer Job Vacancy at ICBT Campus (Kandy and Matara) VACANCIES @ ICBT CAMPUS
+              ICBT Campus is the leading private sector education service provider in Sri Lanka offering a range of International qualifications in association with some of the best Universities and education service providers. REACH NEW HEIGHTS ASA
+              LECTURER (Full Time) Requirements ~ Bachelor's degree in relevant ﬁeld ~ Masters qualiﬁcation and previous experience in lecturing would be anadded advantage ~ Excellent command in English — both oral and written ~ Good presentation
+              skills ~ Ability to work independently with minimum supervision An attractive remuneration package above industry rates and host of other benefits await for the right candidate. Please apply with a comprehensive resume with a photo and
+              details of two non-related referees within 7 days of this advertisement. Please mention the position and branch applied for, on the subject line of the e-mail or on the top left corner of the envelope. HR Manager No. 36. De Krester
+              Place, R.A. De Mel Mawatha, Colombo 04 </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/6.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Teacher of Sinhala Language</h4>
+          <p class="card-text">We are looking for energetic, self-motivated and hardworking individuals to join our Senior School team.</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails6"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails6">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Teacher of Sinhala Language</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/6.jpg" alt="jobimg"> We are looking for energetic, self-motivated and hardworking individuals to join our Senior School team for the following position in
+              our school with immediate effect. (Ownership of this ad is owned by the original owner and this is quoted. We will not accept any responsibility for this information if there is a change or false information included in the notice.)
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/7.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Surf Camp and School Jobs / Yoga Teacher Jobs</h4>
+          <p class="card-text">We are seeking those who want to make your passion your job, and your job your passion. </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails7"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails7">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Surf Camp and School Jobs / Yoga Teacher Jobs</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/7.jpg" alt="jobimg"> We are seeking those who want to make your passion your job, and your job your passion. If you have thorough experience of yoga
+              teacher and want to live on a tropical island for awhile – then we might have your next dream job. You will be based on a lush paradise island in not only one of the best surfing destinations in the world, but also a very interesting
+              region of Sri Lanka with an amazing culture. You will have the possibility to surf lots and be part of an inspiring community. Please submit your application to and to make sure your application won’t get lost in our inbox, please put
+              the position you are applying for as the subject of your email: “YOGA TEACHER”. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/8.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Shadow Teacher - Panadura</h4>
+          <p class="card-text">Job location Colombo </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails8"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails8">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Shadow Teacher - Panadura</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/8.jpg" alt="jobimg"> Job location Colombo Company / Employer Individual Job type Full Time Industry Education Business Function Education & Training Role /
+              Designation Shadow Teacher Required experience (years) 0 About the role • Exceptional knowledge on how to be approachable and friendly with children • Must be with the child in school Monday to Friday from 7am to 1pm – Grade 2 at a
+              leading international school in Panadura. • Excellent command in English. • Salary negotiable • Qualification in Special Education, Child psychology and/or Early Childhood or a related field will be an added advantage • Prior experience
+              as a shadow teacher would be an advantage. • Email your CV to sshumsdeen1@gmail.com with your contact details </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck mb-5" id="deck3" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/9.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title"> Assistant Lecturer </h4>
+          <p class="card-text">Available Vacancies: Assistant Lecture. </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails9"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails9">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title"> Assistant Lecturer </h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/9.jpg" alt="jobimg"> Hiring Organization : Sabaragamuwa University of Sri Lanka Salary Frequency : MONTH Type of Employment : FULL_TIME Description :
+              Assistant Lecturer Government Job Vacancy at Sabaragamuwa University of Sri Lanka Region : Belihuloya Street Address : PO Box.02, Address Region : Belihuloya Postal Code : 70140 </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/10.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Japanese Training Instructor</h4>
+          <p class="card-text">Registration for Japanese language instructor in Sri Lanka Bureau of Foreign Employment.</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails10"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails10">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Japanese Training Instructor</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/10.jpg" alt="jobimg"> About the Company Company Name: Government Jobs Workplace: No. 234, Denzil Kobbekaduwa Mawatha, Battaramulla, Western Province,
+              10120, Sri Lanka Telephone: 0112 880 500 Company Profile: Find government jobs in Sri Lanka today! Browse our government jobs section for the latest vacancies in government companies, corporations, institutes, organizations, municipal
+              councils, provincial councils & regional councils. Also, find government jobs published in newspapers & government gazette Sri Lanka. From entry-level to executive, find ideal government job vacancies 2019 in Sri Lanka. Jobs Daily LK
+              has a comprehensive listing of government job vacancies updated regularly. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/11.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">English Teaching</h4>
+          <p class="card-text">English Language Teacher,</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails11"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails11">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">English Teaching</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/11.jpg" alt="jobimg"> A bearer of an English Language degree or equivalent qualification can apply for the existing vacancy of an English Language
+              Teacher,No 09, Irrigation Place, MC Road, Matale </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/12.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Teaching Assistant Jobs in Eastern Province - Saudi Arabia</h4>
+          <p class="card-text">Location:Eastern Province - Saudi Arabia </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails12"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails12">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Teaching Assistant Jobs in Eastern Province - Saudi Arabia</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/12.jpg" alt="jobimg"> Deadline:2020-04-08SummaryThe position is primarily responsible for assisting the classroom teacher with the implementation of the
+              curriculumJob DutiesThe successful candidate is expected toAssist the teacher in the delivery of lessons in accordance with the goals and objectives of a clearly-defined and documented curriculum for students;Organise classrooms, work
+              centres, and activity areas;Maintain instructional supplies, materials and equipment;Demonstrate creativity;Maintain a safe learning environment for students at all times;Supervise students during lunch and other break times;Respond
+              appropriately to the range of individual needs and abilities within the class;From time to time may be asked to assist with daily hygiene routines;Be fluent in English, oral and written;Perform other duties as assigned by the
+              Headteacher </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck mb-5" id="deck4" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/13.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Kindergarten Teacher</h4>
+          <p class="card-text">Are you a qualified #CHILDCARE WORKER? </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails13"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails13">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Kindergarten Teacher</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/13.jpg" alt="jobimg"> Are you a qualified #CHILDCARE WORKER? Or a #KINDERGARTEN TEACHER? We have an #Australian work opportunity for you. Please call us on
+              0117 831 731 / 076 034 0555 / 076 374 0808 to check your eligibility. LIMITED INTAKES AVAILABLE. POVIGANCE (PVT) LTD. 14A, Melder place, high level road, Nugegoda. info@provigance.com </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/14.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Sri Lanka Teachers Government Vacancy</h4>
+          <p class="card-text"> Hiring Organization : Ministry of Education </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails14"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails14">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Sri Lanka Teachers Government Vacancy</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/14.jpg" alt="jobimg"> Hiring Organization : Ministry of Education Salary Frequency : MONTH Type of Employment : FULL_TIME Description : Sri Lanka Teachers
+              Government Job Vacancy at Ministry of Education Region : Battaramulla Street Address : Isurupaya Address Region : Pelawatta Postal Code : 10120 </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/15.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Principals' Grade III</h4>
+          <p class="card-text">Hiring Organization : Ministry of Education </p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails15"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails15">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Principals' Grade III</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/15.jpg" alt="jobimg"> Hiring Organization : Ministry of Education Salary Frequency : MONTH Type of Employment : FULL_TIME Description : Principals
+              Government Job Vacancy at Ministry of Education Region : Battaramulla Street Address : Palawatta Address Region : Isurupaya Postal Code : 10120 </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/education/16.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">DEAN</h4>
+          <p class="card-text">Position Summary Responsible for leading and managing academic staff.</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails16"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails16">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">DEAN</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/education/16.jpg" alt="jobimg"> Duties and Responsibilities • Lead and manage academic staff and coordinate all academic activities. • Ensure the University has in
+              place robust and appropriate systems and clearly defined work flows for its academic functions. • Ensure compliance with the University’s policies and procedures and regulatory policies and regulations. • Ensure there is Continuous
+              Quality Improvement (CQI) within academic processes. • Lead and manage the development of curricula and programmes. • Provide appropriate support for academic staff to enable effective delivery of programmes. • Monitor, track and report
+              student statistics as required to meet regulatory requirements and to improve student learning. • Effectively manage the University’s academic resources and protect the academic assets by... </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="loadMore" class="btn btn-primary btn-block mb-3" style="display: none">See More <i class="fas fa-forward"></i></button>
+    <button id="totop" class="btn btn-warning fixed-bottom mx-3 my-3" style="display: none" onclick="goTop()"><i class="fas fa-angle-double-up"></i> Top</button>
+  </div>
+  <footer class="bg-dark">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Site Map</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./contact.html"><i class="fas fa-comments"></i> Contact</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-briefcase"></i> Job Fields</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./it.html"><i class="fas fa-angle-double-right"></i> IT</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./constructios.html"><i class="fas fa-angle-double-right"></i> Constructions</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./education.html"><i class="fas fa-angle-double-right"></i> Education</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./health.html"><i class="fas fa-angle-double-right"></i> Health</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./apparel.html"><i class="fas fa-angle-double-right"></i> Apparel</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./financial.html"><i class="fas fa-angle-double-right"></i> Financial</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./hotels.html"><i class="fas fa-angle-double-right"></i> Hotels and Tourism</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./agriculture.html"><i class="fas fa-angle-double-right"></i> Agriculture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./management.html"><i class="fas fa-angle-double-right"></i> Management</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./beauty.html"><i class="fas fa-angle-double-right"></i> Beauty Culture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Need any help?</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-phone"></i> Call Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-mobile-alt"></i><a class="custom-anchor" href="tel:+94711771507"> Hotline - (+94) 71 17 71 507</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-phone-alt"></i><a class="custom-anchor" href="tel:+94773352333"> Landline - (+94) 77 33 52 333</a> </li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-at"></i> Email Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-envelope-open-text"></i><a class="custom-anchor" href="mailto:contact.quickjobs.lk@gmail.com"
+                    target="_blank">contact.quickjobs.lk@gmail.com</a></li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-mail-bulk"></i> Address...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;Department of ICT,<br>&nbsp;&nbsp;&nbsp;Faculty of Technology,<br>&nbsp;&nbsp;&nbsp;University of Ruhuna,<br>&nbsp;&nbsp;&nbsp;Karagoda
+                  Uyangoda,<br>&nbsp;&nbsp;&nbsp;Kamburupitiya,<br>&nbsp;&nbsp;&nbsp;Matara, Sri Lanka.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="container">
+                <div class="text-white text-center mt-3"> You can follow us on Facebook, Twitter or Instagram. Also you are able to contact us via WhatsApp. </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="https://facebook.com/quickjobs.lk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+                <a href="https://twitter.com/quickjobslk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+                <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="display-4 custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+                <a href="https://wa.me/94711771507" target="_blank" class="display-4 custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-white text-center my-3">&copy; All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

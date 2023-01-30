@@ -1,0 +1,156 @@
+/*
+Tipue Search 7.1
+Copyright (c) 2019 Tipue
+Tipue Search is released under the MIT License
+http://www.tipue.com/search
+*/
+
+
+/* search box */
+
+
+#tipue_search_input
+{
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+#tipue_search_input:-webkit-autofill,
+#tipue_search_input:-webkit-autofill:hover, 
+#tipue_search_input:-webkit-autofill:focus
+{
+     -webkit-box-shadow: 0 0 0px 1000px #f3f3f3 inset;
+}
+
+/* search results */
+
+
+#tipue_search_content
+{
+    max-width: 100%;
+	margin: 0;
+}
+.tipue_search_content_title
+{
+    font-size: 24px;
+	color: #111;
+}
+.tipue_search_content_title a
+{
+     color: #0055ff;
+     text-decoration: none;
+}
+.tipue_search_content_title a:hover
+{
+     border-bottom: 2px solid #0055ff;
+}
+.tipue_search_result
+{
+     padding-top: 15px;
+}
+#tipue_search_results_count, .tipue_search_content_debug
+{
+     font: 13px/1.5 monospace;
+	text-transform: uppercase;
+	color: #00b300;
+     -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+#tipue_search_results_count
+{
+     padding-top: 2px;
+}
+.tipue_search_content_url, .tipue_search_note, .tipue_search_related, #tipue_search_error, #tipue_search_replace
+{
+     font: 300 16px/1.4;
+     color: #666;
+     padding-top: 0px;
+     word-wrap: break-word;
+     hyphens: auto;
+}
+.tipue_search_content_url a, .tipue_search_note a, .tipue_search_related a, #tipue_search_replace a, #tipue_search_replace a:hover
+{
+     color: #339e41;
+     text-decoration: none;
+}
+.tipue_search_content_url a:hover, .tipue_search_note a:hover, .tipue_search_related a:hover
+{
+     color: #666;
+}
+#tipue_search_replace, .tipue_search_related
+{
+     margin-top: 7px;
+}
+#tipue_search_error
+{
+     color: #333;
+     margin-top: 17px;
+}
+.tipue_search_content_text
+{
+     font: 300 18px/1.6;
+	color: #333;
+     word-wrap: break-word;
+     hyphens: auto;
+     margin-top: 0px;
+}
+.tipue_search_content_bold
+{
+     font-weight: 400;
+     color: #333;
+}
+.tipue_search_content_debug
+{
+     margin: 7px 0 2px 0;
+}
+
+/* footer */
+
+#tipue_search_foot
+{
+     margin: 51px 0 21px 0;
+}
+#tipue_search_foot_boxes
+{
+    font-size: 14px;
+	text-transform: uppercase;
+	color: #333;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+#tipue_search_foot_boxes li
+{
+     display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#tipue_search_foot_boxes li a
+{
+     background-color: #e0e0eb;
+	color: #666;
+	padding: 10px 17px 11px 17px;
+     border-radius: 3px;
+	margin-right: 7px;
+	text-decoration: none;
+	text-align: center;
+	transition: 0.3s;
+}
+#tipue_search_foot_boxes li.current
+{
+     background: #252525;
+	color: #ccc;
+	padding: 10px 17px 11px 17px;
+     border-radius: 3px;
+	margin-right: 7px;
+	text-align: center;
+}
+#tipue_search_foot_boxes li a:hover
+{
+     background: #252525;
+     color: #ccc;
+}
+

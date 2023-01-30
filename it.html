@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>QuickJobs.LK - Sri Lanka | IT Field</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="./js/bootstrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <script>
+    window.onscroll = function() {
+      showonScroll()
+      showmoreBtn()
+    };
+
+    function showonScroll() {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        $("#totop").fadeIn();
+      } else {
+        $("#totop").fadeOut();
+      }
+    }
+
+    function goTop() {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 600);
+    }
+    $(function() {
+      $("#deck1").slideDown("slow", function() {
+        $("#deck2").slideDown("slow", function() {
+          $("#deck3").slideDown("slow");
+        });
+      });
+    });
+
+    function showmoreBtn() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("loadMore").style.display = "block";
+      } else {
+        document.getElementById("loadMore").style.display = "none";
+      }
+    }
+    $(document).ready(function() {
+      var c = 4;
+      $("#loadMore").click(function() {
+        $("#deck" + c).slideDown("slow");
+        var y = $(window).scrollTop();
+        $("html, body").animate({
+          scrollTop: y + $(window).height()
+        }, 600);
+        c++;
+        if (c > 4) {
+          document.getElementById("loadMore").innerHTML = "End of the List <i class='fas fa-ban'></i>"
+          document.getElementById("loadMore").classList.add("disabled");
+          document.getElementById("loadMore").classList.remove("btn-primary");
+          document.getElementById("loadMore").classList.add("btn-outline-secondary");
+          document.getElementById("loadMore").disabled = true;
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top navbar-custom">
+    <a class="navbar-brand" href="./index.html">QuickJobs.LK</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-briefcase"></i> Job Fields</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item active" href="#"><i class="fas fa-laptop-code"></i> IT</a>
+            <a class="dropdown-item" href="./constructios.html"><i class="fas fa-drafting-compass"></i> Constructions</a>
+            <a class="dropdown-item" href="./education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a class="dropdown-item" href="./health.html"><i class="fas fa-stethoscope"></i> Health</a>
+            <a class="dropdown-item" href="./apparel.html"><i class="fas fa-tshirt"></i> Apparel</a>
+            <a class="dropdown-item" href="./financial.html"><i class="fas fa-dollar-sign"></i> Financial</a>
+            <a class="dropdown-item" href="./hotels.html"><i class="fas fa-utensils"></i> Hotels and Tourism</a>
+            <a class="dropdown-item" href="./agriculture.html"><i class="fas fa-seedling"></i> Agriculture</a>
+            <a class="dropdown-item" href="./management.html"><i class="fas fa-user-tie"></i> Management</a>
+            <a class="dropdown-item" href="./beauty.html"><i class="fas fa-paint-brush"></i> Beauty Culture</a>
+            <a class="dropdown-item" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html"><i class="fas fa-comments"></i> Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto" action="./searchresults.html" method="GET">
+        <div class="mr-3 align-items-center" style="font-size: 25px">
+          <a href="https://facebook.com/quickjobs.lk" target="_blank" class="custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+          <a href="https://twitter.com/quickjobslk" target="_blank" class="custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+          <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+          <a href="https://wa.me/94711771507" target="_blank" class="custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+        </div>
+        <div class="input-group mr-sm-2">
+          <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" class="form-control" placeholder="Search for Jobs" aria-label="Search for Jobs" aria-describedby="basic-addon2" required>
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i> Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    <h1>Jobs in IT field</h1>
+    <p>Jobs related to this field.</p>
+  </div>
+  <div class="container" id="carddecks">
+    <div class="card-deck mb-5" id="deck1" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/it/1.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Computing and IT Jobs</h4>
+          <p class="card-text">media, processing, advertising, manufacturing and phyto-science services</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails1"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Computing and IT Jobs</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/it/1.jpg" alt="jobimg"> We are the fastest growing company in Kenya comprising of media, processing, advertising, manufacturing and phyto-science services. We are
+              looking for passionate, reputable and ethical personnel’s between the ages of 18 – 45 years. He or she must be located in Qualifications Basic computer knowledge Form four levers Undergraduates Graduates Unemployed One should have the
+              ability to establish and develop long term work relationships, identity and opportunities. If interested sms/WhatsApp "BUSINESS EXTENSION" For more details. shortlisting is in progress. APPLY NOW Responsibilities:Deal with computers and
+              other electronics Education <br>
+              <B>requirements:</B><br>Fresh graduates continuing students employed unemployed Qualification<br> less than 1 year in Computing & IT Jobs Experience and skills <br> Fresh graduates continuing students employed </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/it/2.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Web Developer</h4>
+          <p class="card-text">We are looking for a talented coder to work as a web develop.</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails2"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails2">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Web Developer</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/it/2.jpg" alt="jobimg"> We are looking for a talented coder to work as a web developer in a fast growing company The Web developer shall be responsible for websites
+              design and creation and also all technical aspects of Website Applicant must reside around Spintex,Teshie, Nungua and it environment. Interested candidates should forward their CVs to WHATSAPP number NB: NO CALLS <BR>
+              Responsibilities:Deliver excellent user experiences on both web pages and web applications developing websites with web frameworks such as php, python-django, javascript, jquery, angularjs, nodejs, asp.Net mvc developing
+              consumer-targeted websites with database design with mysql Education requirements:Practical programming experience <BR>
+              <B>Qualification requirements:</B>2 years in Computing & IT Jobs Experience and skills <BR>
+              <B>requirements:</B>Practical programming experience strong knowledge of at least 2 relevant(php/python prefered) programming languages required experience in designing and iterating web apps working knowledge of html, css.. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/it/3.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Computer Repair Technician</h4>
+          <p class="card-text">Applicant must reside around Spintex,Teshie, Nungua and it environment</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails3"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails3">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Computer Repair Technician</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/it/3.jpg" alt="jobimg"> Applicant must reside around Spintex,Teshie, Nungua and it environment. Interested candidates should forward their CVs to WHATSAPP number NB:
+              NO CALLS Responsibilities:Responsible for the installation of softwares and fixing computer problems Education requirements:Applicant must have practical experience in computer hardware and networking Qualification requirements:2 years
+              in Computing & IT Jobs Experience and skills requirements:The applicant must be very good in Hardware and networking as well as other technical functions relevant to the position. Employment type:Full-time Work hours:40 hours per week
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/it/4.png" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Senior Java Developer </h4>
+          <p class="card-text">We are looking for a Senior Java Developer at one of the European Institutions in Brussels, Belgium. .</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails4"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails4">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Senior Java Developer </h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/it/4.png" alt="jobimg"> • We are looking for a Senior Java Developer at one of the European Institutions in Brussels, Belgium. Freelancers are also welcome . This
+              positions is open for European candidates living abroad with fluent English. Relocation is required. Remote work is not possible. • Tasks and responsibilities -<BR> Senior Java Developer: <BR>-As a Java Developer, you will be a part of
+              a team of developers delivering in an Agile environment; <BR>-You will work and design complex solutions directly with key stakeholders; <BR>-You will also be responsible for using best practices to ensure high quality software
+              solutions; <BR>-Test driven development and maintenance of web-based applications with JAVA EE (Spring,Hibernate); <BR>-Development and integration of technological components; -Implementation of user requirements; -Prototyping;
+              <BR>-Elaboration of test programs; <BR>-Integration with other applications; Profile <BR>- Senior Java Developer: <BR>-Bachelor or University degree; <BR>-+5/+10/+15 years of Java Development experience; </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck mb-5" id="deck2" style="display: none;">
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/it/5.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Deployment Infrastructure Readiness Lead</h4>
+          <p class="card-text">Ensures readiness across all units deploying the MROi solution (Oracle Applications R12 ERP) by coordinating with program leads and MROi</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails5"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails5">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Deployment Infrastructure Readiness Lead</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/it/5.jpg" alt="jobimg"> The MROi Deployment Infrastructure Readiness Lead defines the sequence of operations or steps, often referred to as a deployment plan, that
+              must be carried out to deliver changes into a target system environment. <BR><B>About Us: </B> Diligent Consulting, Inc. is a Service Disabled Veteran Owned Small Business (SDVOSB) focused on applications development, integration,
+              deployment, and operation of state-of-the-art information systems that deliver critical network-centric solutions.<BR> We have an entrepreneurial environment filled with challenging opportunities for cutting-edge professionals who
+              believe in a commitment to excellence and integrity.<BR> We value domain expertise, experience and knowledge and a commitment to mission success and customer satisfaction. We offer an exceptionally generous benefit plan for our
+              employees. <BR>
+              <B>Position Description & Summary:</B> The MROi Deployment Infrastructure Readiness Lead defines the sequence of operations or steps, often referred to as a deployment plan, that must be carried out to deliver changes into a target
+              system environment. Ensures readiness across all units deploying the MROi solution (Oracle Applications R12 ERP) by coordinating with program leads and MROi... </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/it/6.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">IT Manager</h4>
+          <p class="card-text">As part of a small team, managing the IT Department you are directly responsibility for the corporate servers and databases</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails6"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails6">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">IT Manager</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/it/6.jpg" alt="jobimg"> • <B>Job Role <BR> Job Description</B><BR> As part of a small team, managing the IT Department you are directly responsibility for the
+              corporate servers and databases ensuring availability and consistency of services to the users, ensuring the smooth and efficient running of the Department <BR><B>Duties</B><BR> • Ownership of and satisfying the needs and requirements
+              of the system’s users. • Ensure that all systems are kept current both to maximise performance • To oversee the testing of new application software. • Maintain and update all relevant reports and departmental manuals. • Liaise with
+              Directors, Managers and other Departments on IT systems and their needs and uses. • Management and document of all IT projects and tasks from inception to completion. • Ensure adequate levels of staff cover in the Department at all
+              times. • Systems process enhancement - identify and recommend to Ops. • Ensure business continuity plan is in place. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card text-center">
+        <img class="card-img-top" src="./images/jobs/it/7.jpg" alt="jobimg" style="width:100%">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">BI Engineer – Google Data Studio</h4>
+          <p class="card-text">Eyepax IT Consulting (Pvt) Ltd.</p>
+          <button type="button" class="btn btn-success mt-auto" data-toggle="modal" data-target="#moreDetails7"> Details </button>
+        </div>
+      </div>
+      <div class="modal fade" id="moreDetails7">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">BI Engineer – Google Data Studio</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body mb-3">
+              <img class="img-fluid mx-auto d-block rounded mb-3" src="./images/jobs/it/7.jpg" alt="jobimg"> Eyepax is on the lookout for ambitious and talented BI Engineer – Google Data Studio more details-website -eyepax.com </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="loadMore" class="btn btn-primary btn-block mb-3" style="display: none">See More <i class="fas fa-forward"></i></button>
+    <button id="totop" class="btn btn-warning fixed-bottom mx-3 my-3" style="display: none" onclick="goTop()"><i class="fas fa-angle-double-up"></i> Top</button>
+  </div>
+  <footer class="bg-dark">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Site Map</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./contact.html"><i class="fas fa-comments"></i> Contact</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-briefcase"></i> Job Fields</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./it.html"><i class="fas fa-angle-double-right"></i> IT</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./constructios.html"><i class="fas fa-angle-double-right"></i> Constructions</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./education.html"><i class="fas fa-angle-double-right"></i> Education</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./health.html"><i class="fas fa-angle-double-right"></i> Health</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./apparel.html"><i class="fas fa-angle-double-right"></i> Apparel</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./financial.html"><i class="fas fa-angle-double-right"></i> Financial</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./hotels.html"><i class="fas fa-angle-double-right"></i> Hotels and Tourism</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./agriculture.html"><i class="fas fa-angle-double-right"></i> Agriculture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./management.html"><i class="fas fa-angle-double-right"></i> Management</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./beauty.html"><i class="fas fa-angle-double-right"></i> Beauty Culture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Need any help?</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-phone"></i> Call Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-mobile-alt"></i><a class="custom-anchor" href="tel:+94711771507"> Hotline - (+94) 71 17 71 507</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-phone-alt"></i><a class="custom-anchor" href="tel:+94773352333"> Landline - (+94) 77 33 52 333</a> </li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-at"></i> Email Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-envelope-open-text"></i><a class="custom-anchor" href="mailto:contact.quickjobs.lk@gmail.com"
+                    target="_blank">contact.quickjobs.lk@gmail.com</a></li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-mail-bulk"></i> Address...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;Department of ICT,<br>&nbsp;&nbsp;&nbsp;Faculty of Technology,<br>&nbsp;&nbsp;&nbsp;University of Ruhuna,<br>&nbsp;&nbsp;&nbsp;Karagoda
+                  Uyangoda,<br>&nbsp;&nbsp;&nbsp;Kamburupitiya,<br>&nbsp;&nbsp;&nbsp;Matara, Sri Lanka.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="container">
+                <div class="text-white text-center mt-3"> You can follow us on Facebook, Twitter or Instagram. Also you are able to contact us via WhatsApp. </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="https://facebook.com/quickjobs.lk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+                <a href="https://twitter.com/quickjobslk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+                <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="display-4 custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+                <a href="https://wa.me/94711771507" target="_blank" class="display-4 custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-white text-center my-3">&copy; All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

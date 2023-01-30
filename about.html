@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>QuickJobs.LK - Sri Lanka | About</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="./js/bootstrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./css/custom.css">
+  <script>
+    window.onscroll = function() {
+      showonScroll()
+      showmoreBtn()
+    };
+
+    function showonScroll() {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        $("#totop").fadeIn();
+      } else {
+        $("#totop").fadeOut();
+      }
+    }
+
+    function goTop() {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 600);
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top navbar-custom">
+    <a class="navbar-brand" href="./index.html">QuickJobs.LK</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-briefcase"></i> Job Fields</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./it.html"><i class="fas fa-laptop-code"></i> IT</a>
+            <a class="dropdown-item" href="./constructios.html"><i class="fas fa-drafting-compass"></i> Constructions</a>
+            <a class="dropdown-item" href="./education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a class="dropdown-item" href="./health.html"><i class="fas fa-stethoscope"></i> Health</a>
+            <a class="dropdown-item" href="./apparel.html"><i class="fas fa-tshirt"></i> Apparel</a>
+            <a class="dropdown-item" href="./financial.html"><i class="fas fa-dollar-sign"></i> Financial</a>
+            <a class="dropdown-item" href="./hotels.html"><i class="fas fa-utensils"></i> Hotels and Tourism</a>
+            <a class="dropdown-item" href="./agriculture.html"><i class="fas fa-seedling"></i> Agriculture</a>
+            <a class="dropdown-item" href="./management.html"><i class="fas fa-user-tie"></i> Management</a>
+            <a class="dropdown-item" href="./beauty.html"><i class="fas fa-paint-brush"></i> Beauty Culture</a>
+            <a class="dropdown-item" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html"><i class="fas fa-comments"></i> Contact</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto" action="./searchresults.html" method="GET">
+        <div class="mr-3 align-items-center" style="font-size: 25px">
+          <a href="https://facebook.com/quickjobs.lk" target="_blank" class="custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+          <a href="https://twitter.com/quickjobslk" target="_blank" class="custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+          <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+          <a href="https://wa.me/94711771507" target="_blank" class="custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+        </div>
+        <div class="input-group mr-sm-2">
+          <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" class="form-control" placeholder="Search for Jobs" aria-label="Search for Jobs" aria-describedby="basic-addon2" required>
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i> Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    <h1>About Us</h1>
+    <p>This project initiated under Department of ICT, Faculty of Technology, University of Ruhuna, Sri Lanka as a group assignment for the subject Web Technologies (ICT1143).</p>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./images/devs/instructor.jpeg" class="rounded-circle" alt="img" width="100%">
+            </div>
+            <div class="col-md-8">
+              <h1>Ms. D.S. Vithanage</h1>
+              <kbd>Instructor</kbd></br>
+              <span>Lecturer,</span></br>
+              <span>Department of ICT,</span></br>
+              <span>Faculty of Technology,</span></br>
+              <span>University of Ruhuna.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./images/devs/tg389.jpeg" class="rounded-circle" alt="img" width="100%">
+            </div>
+            <div class="col-md-8">
+              <h1> N.M.L. Madhusanka</h1>
+              <kbd>Developer</kbd></br>
+              <span>TG/2018/389</span></br>
+              <span>Department of ICT,</span></br>
+              <span>Faculty of Technology,</span></br>
+              <span>University of Ruhuna.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./images/devs/tg391.jpeg" class="rounded-circle" alt="img" width="100%">
+            </div>
+            <div class="col-md-8">
+              <h1>K.B.V.S. Jayasooriya</h1>
+              <kbd>Developer</kbd></br>
+              <span>TG/2018/391</span></br>
+              <span>Department of ICT,</span></br>
+              <span>Faculty of Technology,</span></br>
+              <span>University of Ruhuna.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./images/devs/tg392.jpeg" class="rounded-circle" alt="img" width="100%">
+            </div>
+            <div class="col-md-8">
+              <h1>W.M.P.N. Jayaweera</h1>
+              <kbd>Developer</kbd></br>
+              <span>TG/2018/392</span></br>
+              <span>Department of ICT,</span></br>
+              <span>Faculty of Technology,</span></br>
+              <span>University of Ruhuna.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./images/devs/tg393.jpg" class="rounded-circle" alt="img" width="100%">
+            </div>
+            <div class="col-md-8">
+              <h1>K.K.A.N. Kotuwege</h1>
+              <kbd>Developer</kbd></br>
+              <span>TG/2018/393</span></br>
+              <span>Department of ICT,</span></br>
+              <span>Faculty of Technology,</span></br>
+              <span>University of Ruhuna.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Disclaimer</h1>
+    <p>We have used below free/Open Source projects with this educational project. We clearly state that we do not used those tools for any kind of direct or indirect commercial purpose.</p>
+    <div class="row mt-1">
+      <div class="col-md-12">
+        <div class="jumbotron bg-secondary text-white">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Bootstrap v4.3.1</h1>
+              <p>Bootstrap. Build responsive, mobile-first projects on the web with the world's most popular front-end component library. Bootstrap is an open source toolkit for developing with HTML, CSS, and JS.</p>
+              <span>Website - </span><a class="custom-anchor" href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-md-12">
+        <div class="jumbotron bg-secondary text-white">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Font Awesome Free v5.10.2</h1>
+              <p>Font Awesome is a font and icon toolkit based on CSS and LESS. It was made by Dave Gandy for use with Twitter Bootstrap, and later was incorporated into the BootstrapCDN.</p>
+              <span>Website - </span><a class="custom-anchor" href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-md-12">
+        <div class="jumbotron bg-secondary text-white">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Tipue Search v7.1</h1>
+              <p>Tipue Search, a Site Search jQuery Plugin. Free, open source, responsive and fast. It doesn't need MySQL or similar. It doesn't even need a web server.</p>
+              <span>Website - </span><a class="custom-anchor" href="http://www.tipue.com/search/" target="_blank">http://www.tipue.com/search/</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="totop" class="btn btn-warning fixed-bottom mx-3 my-3" style="display: none" onclick="goTop()"><i class="fas fa-angle-double-up"></i> Top</button>
+  <footer class="bg-dark">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Site Map</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./contact.html"><i class="fas fa-comments"></i> Contact</a></li>
+                <li class="list-group-item bg-dark footer-list"><a class="custom-anchor" href="./about.html"><i class="fas fa-info-circle"></i> About</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-briefcase"></i> Job Fields</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./it.html"><i class="fas fa-angle-double-right"></i> IT</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./constructios.html"><i class="fas fa-angle-double-right"></i> Constructions</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./education.html"><i class="fas fa-angle-double-right"></i> Education</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./health.html"><i class="fas fa-angle-double-right"></i> Health</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./apparel.html"><i class="fas fa-angle-double-right"></i> Apparel</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./financial.html"><i class="fas fa-angle-double-right"></i> Financial</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./hotels.html"><i class="fas fa-angle-double-right"></i> Hotels and Tourism</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./agriculture.html"><i class="fas fa-angle-double-right"></i> Agriculture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./management.html"><i class="fas fa-angle-double-right"></i> Management</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./beauty.html"><i class="fas fa-angle-double-right"></i> Beauty Culture</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<a class="custom-anchor" href="./other.html"><i class="fas fa-angle-double-right"></i> Other</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="font-weight-bolder text-white text-center"><u>Need any help?</u></div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-phone"></i> Call Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-mobile-alt"></i><a class="custom-anchor" href="tel:+94711771507"> Hotline - (+94) 71 17 71 507</a></li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-phone-alt"></i><a class="custom-anchor" href="tel:+94773352333"> Landline - (+94) 77 33 52 333</a> </li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-at"></i> Email Us...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;<i class="fas fa-envelope-open-text"></i><a class="custom-anchor" href="mailto:contact.quickjobs.lk@gmail.com"
+                    target="_blank">contact.quickjobs.lk@gmail.com</a></li>
+              </ul>
+              <ul class="list-group list-group-flush text-white">
+                <li class="list-group-item bg-dark"><i class="fas fa-mail-bulk"></i> Address...</li>
+                <li class="list-group-item bg-dark py-0 small footer-list">&nbsp;&nbsp;&nbsp;Department of ICT,<br>&nbsp;&nbsp;&nbsp;Faculty of Technology,<br>&nbsp;&nbsp;&nbsp;University of Ruhuna,<br>&nbsp;&nbsp;&nbsp;Karagoda
+                  Uyangoda,<br>&nbsp;&nbsp;&nbsp;Kamburupitiya,<br>&nbsp;&nbsp;&nbsp;Matara, Sri Lanka.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="container">
+                <div class="text-white text-center mt-3"> You can follow us on Facebook, Twitter or Instagram. Also you are able to contact us via WhatsApp. </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="https://facebook.com/quickjobs.lk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-facebook custom-zoom"></i></a>
+                <a href="https://twitter.com/quickjobslk" target="_blank" class="display-4 custom-anchor"><i class="fab fa-twitter custom-zoom"></i></a>
+                <a href="https://www.instagram.com/quickjobs.lk/" target="_blank" class="display-4 custom-anchor"><i class="fab fa-instagram custom-zoom"></i></a>
+                <a href="https://wa.me/94711771507" target="_blank" class="display-4 custom-anchor"><i class="fab fa-whatsapp custom-zoom"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-white text-center my-3">&copy; All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
